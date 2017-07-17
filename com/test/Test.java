@@ -1,5 +1,9 @@
 package com.test;
 
+
+
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,6 +19,8 @@ public class Test {
 	        System.out.println(u1.getName()+" "+u1.getId());
 	        System.out.println(u.getAge());
 	        System.out.println(h);
+	        List list=h.getList();
+	        System.out.println(list.get(1));
 	        System.out.println(h.getUser().getAge());
 	}
 }

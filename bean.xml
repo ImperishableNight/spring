@@ -17,7 +17,22 @@
 	<bean id="HelloWorld" class="com.test.HelloWorld">
 		<constructor-arg value="spring2" type="java.lang.String"></constructor-arg>
 		<property name="user">
-			<ref bean="Usera" />
+			<ref bean="User" />
+		</property>
+		<property name="list">
+			<list>
+			<value>list1</value>
+			<value>list1</value>
+			<value>list2</value>
+			</list>
+		</property>
+		<property name="map">
+			<map>
+			<entry key="first" value="1"></entry>
+			<entry key="second" value="1"></entry>
+			<entry key="thrid" value="1"></entry>
+			</map>
 		</property>
 	</bean>
+	
 </beans>
