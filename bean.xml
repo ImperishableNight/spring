@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="User" class="com.test.User">
+		<property name="name" value="lisi"></property>
+		<property name="id" value="1"></property>
+		<property name="age" value="18"></property>
+	</bean>
+	
+	<bean id="Usera" class="com.test.User">
+		<constructor-arg  value="zhangsan" />
+		<constructor-arg  value="2" />
+	</bean>
+	
+	<bean id="HelloWorld" class="com.test.HelloWorld">
+		<constructor-arg value="spring2" type="java.lang.String"></constructor-arg>
+		<property name="user">
+			<ref bean="Usera" />
+		</property>
+	</bean>
+</beans>
